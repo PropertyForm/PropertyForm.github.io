@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Twin</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/numeric.js"></script>
+</head>
+<body>
+    <section class="form-area">
+        <div class="global-step" style="display: block">
+            <div class="top-part">
+                <h1>Kostenlose immobilienbewertung</h1>
+                <p>in nur 5 Minuten und direkt mit Ergebnis</p>
+                <span class="promotion">Bestpreis</span>
+            </div>
+            <div class="middle-part">
+                <h3>Welche Objektart mochten Sie verkaufen?</h3>
+                <div class="types">
+                    <figure class="type-of type-1" data-type="type-1">
+                        <img src="img/grundstueck.png">
+                        <figcaption>
+                            Grundstuck
+                        </figcaption>
+                    </figure>
+                    <figure class="type-of type-2" data-type="type-2">
+                        <img src="img/einfamilienhaus.jpg">
+                        <figcaption>
+                            Haus
+                        </figcaption>
+                    </figure>
+                    <figure class="type-of type-3" data-type="type-3">
+                        <img src="img/etagenwohnung.png">
+                        <figcaption>
+                            Wohnung
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="bottom-part">
+                <h3>Warum die Immobilienbewertung so wichtig ist?</h3>
+            </div>
+        </div>
+        <div class="type-area selected-type-1" style="display: none">
+            <div class="step-area step-1" data-step="step-1" data-status="0" style="display: block">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 1: <span>GROSSE UND REGION</span></h2>
+                    <p class="progress-percent">0 %</p>
+                    <div class="progress-line">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <img class="location-img" src="img/location.png">
+                    <div class="inline-input">
+                        <p class="text">
+                            Welche Flache hat das Grundstuck?
+                        </p>
+                        <input class="standard-input" name="Welche Flache hat das Grundstuck?" type="text" placeholder="m2" data-req="false" data-type="number">
+                    </div>
+                    <div class="inline-input">
+                        <p class="text">
+                            In welcher Region befindet sich ihr Grundstuck?
+                        </p>
+                        <input class="standard-input" name="In welcher Region befindet sich ihr Grundstuck?" type="text" placeholder="PLZ" data-req="false">
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn btn-back"><i class="fa fa-caret-left" aria-hidden="true"></i>zuruck</button>
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <button class="btn btn-next">weiter<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area step-2" data-step="step-2" data-status="0" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 2: <span>Grundstucksart</span></h2>
+                    <p class="progress-percent">25 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 25%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <p class="text">
+                       Ist das Grundstuck erschlossen?
+                    </p>
+                    <div class="types">
+                        <figure class="type-of type-1" data-req="false" data-name="Ist das Grundstuck erschlossen?" data-value="Erschlossen">
+                            <img src="img/grundstueck_erschlossen.png">
+                            <figcaption>
+                                Erschlossen
+                            </figcaption>
+                        </figure>
+                        <figure class="type-of type-2" data-req="false" data-name="Ist das Grundstuck erschlossen?" data-value="Teilerschlossen">
+                            <img src="img/grundstueck_teilerschlossen.png">
+                            <figcaption>
+                                Teilerschlossen
+                            </figcaption>
+                        </figure>
+                        <figure class="type-of type-3" data-req="false" data-name="Ist das Grundstuck erschlossen?" data-value="Unerschlossen">
+                            <img src="img/grundstueck_nicht_erschlossen.png">
+                            <figcaption>
+                                Unerschlossen
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn btn-back"><i class="fa fa-caret-left" aria-hidden="true"></i>zuruck</button>
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <button class="btn btn-next">weiter<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area step-3" data-step="step-3" data-status="0" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 3: <span>Bebauungsmoglichkeiten</span></h2>
+                    <p class="progress-percent">50 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <p class="text">
+                        Wie sind die Bebauungsmoglichkeiten?
+                    </p>
+                    <div class="types">
+                        <figure class="type-of type-1" data-req="false" data-name="Wie sind die Bebauungsmoglichkeiten?" data-value="Kurzfristig bebaubar">
+                            <img src="img/grundstueck_kurzfristig_bebaubar.png">
+                            <figcaption>
+                                Kurzfristig bebaubar
+                            </figcaption>
+                        </figure>
+                        <figure class="type-of type-2" data-req="false" data-name="Wie sind die Bebauungsmoglichkeiten?" data-value="Eingeschrank bebaubar">
+                            <img src="img/grundstueck_eingeschraenkt_bebaubar.png">
+                            <figcaption>
+                                Eingeschrank bebaubar
+                            </figcaption>
+                        </figure>
+                        <figure class="type-of type-3" data-req="false" data-name="Wie sind die Bebauungsmoglichkeiten?" data-value="Nicht bebaubar">
+                            <img src="img/grundstueck_nicht_bebaubar.png">
+                            <figcaption>
+                                Nicht bebaubar
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn btn-back"><i class="fa fa-caret-left" aria-hidden="true"></i>zuruck</button>
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <button class="btn btn-next">weiter<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area loading" data-step="loading" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 4: <span>Ergebnis Erhalten</span></h2>
+                    <p class="progress-percent">75 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <p class="text">
+                       Einen Augenblick bitte...
+                    </p>
+                    <img class="preloader-img" src="img/preloader.png">
+                    <h3 class="preloader-text">VIE-FINANZ ermittelt den Verkehrswert<br>Ihres Grundstucks oder Ihrer Immobilie.</h3>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area step-4 complete-form" data-step="step-4" data-status="0" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 4: <span>Ergebnis Erhalten</span></h2>
+                    <p class="progress-percent">75 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <div class="column left-column">
+                        <p class="text">
+                            Wer soll die Bewertung erhalten?
+                        </p>
+                        <div class="two-inputs">
+                            <select class="standard-input standard-dropdown" data-placeholder="Anrede *" data-req="false" data-name="Anrede">
+                                <option></option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="WY">Fgsdf</option>
+                                <option value="WY">Toort</option>
+                                <option value="WY">Riiol</option>
+                            </select>
+                        </div>
+                        <div class="two-inputs">
+                            <input class="standard-input" name="Vorname" type="text" placeholder="Vorname *" data-req="false">
+                            <input class="standard-input" name="Nachname" type="text" placeholder="Nachname *" data-req="false">
+                        </div>
+                        <div class="two-inputs">
+                            <div class="input-with-tip">
+                                <input class="standard-input" name="Telefon" type="text" placeholder="Telefon *" data-type="phone">
+                                <span class="tip-icon"></span>
+                                <span class="tip-message">
+                                    <b>Warum meine Telefonnummer?</b><br>
+                                    Für Rückfragen und zur Besprechung<br>
+                                    individueller Besonderheiten
+                                </span>
+                            </div>
+                            <input class="standard-input" name="E-Mail" type="text" placeholder="E-Mail *" data-type="email">
+                        </div>
+                        <label class="checkbox-label">
+                            <input type="checkbox" data-type="checkbox" value="Agreement">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Ich bin der Eigentumer oder vom Eigentumer beauftagt *</span>
+                        </label>
+                        <button class="btn btn-finish">Ergebnis erhalten</button>
+                    </div>
+                    <div class="column right-column">
+                        <div class="certificate">
+                            <img src="img/ssl.png">
+                            <span class="text small-text">Keine Datenweitergabe zu Werbezwecken</span>
+                        </div>
+                        <p class="text list-text">Bewertung direkt per E-Mail</p>
+                        <p class="text list-text">Ergebnis noch heute</p>
+                        <p class="text list-text">Kostenlos und unverbindlich</p>
+                        <div class="form-review">
+                            <p class="text text-italic review-text ">Super Service!<br>
+                            Schell und unkompliziert.</p>
+                            <p class="text text-italic review-author">Anita T. aus Zwickau</p>
+                        </div>
+                    </div>
+                    <div class="column-bottom">
+                        <p class="text privacy-text">
+                            Wir fragen Ihre Kontaktdaten ab, um sicherzustellen,
+                            dass Ihre Immobiliendaten ausschließlich von Ihnen
+                            genutzt werden. Ihre Kontaktdaten werden nicht an
+                            Dritte weitergeleitet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="step-area menu" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title"><span>Meine Angaben</span></h2>
+                </div>
+                <div class="middle-part">
+                    <ul class="menu-list">
+                        <li class="menu-item item-disabled" data-step="step-1" data-status="0">
+                            <p class="item-title">Größe und Region</p>
+                            <p class="text item-descr">Größe, Region</p>
+                        </li>
+                        <li class="menu-item item-disabled" data-step="step-2" data-status="0">
+                            <p class="item-title">Grundstücksart</p>
+                            <p class="text item-descr">Erschlossen, Teilerschlossen, Unerschlossen</p>
+                        </li>
+                        <li class="menu-item item-disabled" data-step="step-3" data-status="0">
+                            <p class="item-title">Bebauungsmöglichkeiten</p>
+                            <p class="text item-descr">Kurzfristig bebaubar, Eingeschränkt bebaubar, Nicht bebaubar</p>
+                        </li>
+                        <li class="menu-item item-disabled" data-step="step-4" data-status="0">
+                            <p class="item-title">Ergebnis erhalten</p>
+                            <p class="text item-descr">Anrede, Vorname, Nachname, Telefon, E-Mail, Eigentümer</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="type-area selected-type-2" style="display: none">
+            <div class="step-area step-1" data-step="step-1" data-status="0" style="display: block">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 1: <span>Haus-Stil</span></h2>
+                    <p class="progress-percent">25 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 25%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <div class="types">
+                        <figure class="type-of type-1" data-req="false" data-name="Haus-Stil" data-value="Einfamilienhaus">
+                            <img src="img/einfamilienhaus.jpg">
+                            <figcaption>
+                                Einfamilienhaus
+                            </figcaption>
+                        </figure>
+                        <figure class="type-of type-2" data-req="false" data-name="Haus-Stil" data-value="Zweifamilienhaus">
+                            <img src="img/zweifamilienhaus.png">
+                            <figcaption>
+                                Zweifamilienhaus
+                            </figcaption>
+                        </figure>
+                        <figure class="type-of type-3" data-req="false" data-name="Haus-Stil" data-value="Doppelhaushalfte">
+                            <img src="img/doppelhaushaelfte.png">
+                            <figcaption>
+                                Doppelhaushalfte
+                            </figcaption>
+                        </figure>
+                        <figure class="type-of type-3" data-req="false" data-name="Haus-Stil" data-value="Reihnhaus">
+                            <img src="img/reihenhaus.png">
+                            <figcaption>
+                                Reihnhaus
+                            </figcaption>
+                        </figure>
+                        <figure class="type-of type-3" data-req="false" data-name="Haus-Stil" data-value="Mehrfamilienhaus">
+                            <img src="img/mehrfamilienhaus.png">
+                            <figcaption>
+                                Mehrfamilienhaus
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn btn-back"><i class="fa fa-caret-left" aria-hidden="true"></i>zuruck</button>
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <button class="btn btn-next">weiter<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area step-2" data-step="step-2" data-status="0" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 2: <span>Allgemeine Angaben</span></h2>
+                    <p class="progress-percent">17 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 17%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <div class="two-inputs">
+                        <select class="standard-input standard-dropdown" data-placeholder="Bauweise *" data-req="false" data-name="Bauweise">
+                            <option></option>
+                            <option value="Massivbauweise">Massivbauweise</option>
+                            <option value="Fertighaus">Fertighaus</option>
+                            <option value="Fertighaus Holz">Fertighaus Holz</option>
+                            <option value="Fachwerkhaus">Fachwerkhaus</option>
+                        </select>
+                        <input class="standard-input" name="Baujahr z.B. 1995" type="text" placeholder="Baujahr z.B. 1995 *" data-req="false" data-type="number">
+                    </div>
+                    <div class="one-input">
+                        <select class="standard-input standard-dropdown" data-placeholder="Sanierungen, die in den letzten 15 Jahren durchgeführt wurden *" data-req="false" data-name="Sanierungen, die in den letzten 15 Jahren durchgeführt wurden">
+                            <option></option>
+                            <option value="Vollständig innerhalb der letzten 15 Jahren saniert">Vollständig innerhalb der letzten 15 Jahren saniert</option>
+                            <option value="Teilweise innerhalb der letzten 15 Jahren saniert">Teilweise innerhalb der letzten 15 Jahren saniert</option>
+                            <option value="Keine Sanierung innerhalb der letzten 15 Jahre">Keine Sanierung innerhalb der letzten 15 Jahre</option>
+                            <option value="Nicht bekannt">Nicht bekannt</option>
+                        </select>
+                    </div>
+                    <div class="two-inputs">
+                        <input class="standard-input" name="Anzahl Etagen" type="text" placeholder="Anzahl Etagen *" data-req="false">
+                        <input class="standard-input" name="Grundstuckgrove (m2)" type="text" placeholder="Grundstuckgrove (m2) *" data-req="false" data-type="number">
+                    </div>
+                    <div class="two-inputs">
+                        <input class="standard-input" name="Anzahl Zimmer" type="text" placeholder="Anzahl Zimmer *" data-req="false">
+                        <input class="standard-input" name="Wohnflache (m2)" type="text" placeholder="Wohnflache (m2) *" data-req="false" data-type="number">
+                    </div>
+                    <div class="two-inputs">
+                        <select class="standard-input standard-dropdown" data-placeholder="Dacheindeckung *" data-req="false" data-name="Dacheindeckung">
+                            <option></option>
+                            <option value="Dachpfannen">Dachpfannen</option>
+                            <option value="Betondachsteine">Betondachsteine</option>
+                            <option value="Schiefer">Schiefer</option>
+                            <option value="Metall">Metall</option>
+                            <option value="Reetdach">Reetdach</option>
+                            <option value="Dachbegrünung">Dachbegrünung</option>
+                            <option value="Dachpappe">Dachpappe</option>
+                            <option value="Faserzementplatten">Faserzementplatten</option>
+                            <option value="Wellplatte">Wellplatte</option>
+                            <option value="Sonstige">Sonstige</option>
+                        </select>
+                        <select class="standard-input standard-dropdown" data-placeholder="Dachausbau *" data-req="false" data-name="Dachausbau">
+                            <option></option>
+                            <option value="Voll ausgebaut">Voll ausgebaut</option>
+                            <option value="Teilweise ausgebaut">Teilweise ausgebaut</option>
+                            <option value="Flachdach">Flachdach</option>
+                            <option value="Nicht ausgebaut">Nicht ausgebaut</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn btn-back"><i class="fa fa-caret-left" aria-hidden="true"></i>zuruck</button>
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <button class="btn btn-next">weiter<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area step-3" data-step="step-3" data-status="0" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 3: <span>Generelle Ausstattung</span></h2>
+                    <p class="progress-percent">34 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 34%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <div class="types">
+                        <figure class="type-of type-1" data-req="false" data-name="bad" data-value="Bad mit Fenster">
+                            <img src="img/bad_mit_fenster.png">
+                            <figcaption>
+                                Bad mit Fenster
+                            </figcaption>
+                        </figure>
+                        <figure class="type-of type-2" data-req="false" data-name="bad" data-value="Bad innenliegend">
+                            <img src="img/bad_ohne_fenster.png">
+                            <figcaption>
+                                Bad innenliegend
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="checkbox-row">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Mehr als 1 Bad">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Mehr als 1 Bad</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Badewanne">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Badewanne</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Dusche">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Dusche</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Separates Gaste-WC">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Separates Gaste-WC</span>
+                        </label>
+                    </div>
+                    <div class="two-inputs">
+                        <select class="standard-input standard-dropdown" data-placeholder="Standard der Außenanlagen *" data-req="false" data-name="Standard der Außenanlagen">
+                            <option></option>
+                            <option value="Üblich">Üblich</option>
+                            <option value="Überdurchschnittlich">Überdurchschnittlich</option>
+                            <option value="Unterdurchschnittlich">Unterdurchschnittlich</option>
+                            <option value="Keine">Keine</option>
+                        </select>
+                        <select class="standard-input standard-dropdown" data-placeholder="Fußbodenbelag im Wohnzimmer *" data-req="false" data-name="Fußbodenbelag im Wohnzimmer">
+                            <option></option>
+                            <option value="Einfache Holzdielen">Einfache Holzdielen</option>
+                            <option value="Kunststoff/PVC">Kunststoff/PVC</option>
+                            <option value="Fliesen">Fliesen</option>
+                            <option value="Kunststeinplatten">Kunststeinplatten</option>
+                            <option value="Parkett">Parkett</option>
+                            <option value="Natursteinbelag">Natursteinbelag</option>
+                            <option value="Hochwertiger Massivholzboden">Hochwertiger Massivholzboden</option>
+                            <option value="Teppich">Teppich</option>
+                            <option value="Laminat">Laminat</option>
+                            <option value="Linoleum">Linoleum</option>
+                            <option value="Korkboden">Korkboden</option>
+                            <option value="Sonstige">Sonstige</option>
+                        </select>
+                    </div>
+                    <div class="three-inputs">
+                        <select class="standard-input standard-dropdown" data-placeholder="Fenster *" data-req="false" data-name="Fenster">
+                            <option></option>
+                            <option value="Einfachverglasung">Einfachverglasung</option>
+                            <option value="Dreifachverglasung">Dreifachverglasung</option>
+                            <option value="Isolierverglasung">Isolierverglasung</option>
+                            <option value="Schallschutzverglasung">Schallschutzverglasung</option>
+                            <option value="Kastenfenster">Kastenfenster</option>
+                            <option value="Raumhohe Isolierverglasung">Raumhohe Isolierverglasung</option>
+                            <option value="Sonstige">Sonstige</option>
+                        </select>
+                        <select class="standard-input standard-dropdown" data-placeholder="Heizungsart *" data-req="false" data-name="Heizungsart">
+                            <option></option>
+                            <option value="Zentralheizung">Zentralheizung</option>
+                            <option value="Fernwärme">Fernwärme</option>
+                            <option value="Holzpellets-Heizung">Holzpellets-Heizung</option>
+                            <option value="Fußbodenheizung">Fußbodenheizung</option>
+                            <option value="Solarkollektoren">Solarkollektoren für Warmwasser und Heizung</option>
+                            <option value="Wärmepumpe">Wärmepumpe</option>
+                            <option value="Einzelöfen">Einzelöfen</option>
+                            <option value="Schwerkraftheizung">Schwerkraftheizung</option>
+                            <option value="Nachtspeicherheizung">Nachtspeicherheizung</option>
+                            <option value="Sonstige">Sonstige</option>
+                        </select>
+                        <select class="standard-input standard-dropdown" data-placeholder="Keller *" data-req="false" data-name="Keller">
+                            <option></option>
+                            <option value="Voll unterkellert">Voll unterkellert</option>
+                            <option value="Teilweise unterkellert">Teilweise unterkellert</option>
+                            <option value="Nicht unterkellert">Nicht unterkellert</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn btn-back"><i class="fa fa-caret-left" aria-hidden="true"></i>zuruck</button>
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <button class="btn btn-next">weiter<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area step-4" data-step="step-4" data-status="0" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 4: <span>Besonderheiten</span></h2>
+                    <p class="progress-percent">51 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 51%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <div class="checkbox-row">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Einbaukuche">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Einbaukuche</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Wintergarten">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Wintergarten</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Offener Kamin/Kachelofen">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Offener Kamin/Kachelofen</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Sauna">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Sauna</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Abstellraum">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Abstellraum</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Privatgarten">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Privatgarten</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Fassade, Aufenwade uberwiegend gedammt">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Fassade, Aufenwade uberwiegend gedammt</span>
+                        </label>
+                    </div>
+                    <div class="two-inputs">
+                        <div class="inline-input">
+                            <p class="text">
+                                Garagenstellplatze
+                            </p>
+                            <select class="standard-input standard-dropdown" data-req="false" data-name="Garagenstellplatze">
+                                <option value="1">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="inline-input">
+                            <p class="text">
+                                Aubenstellplatze
+                            </p>
+                            <select class="standard-input standard-dropdown" data-req="false" data-name="Aubenstellplatze">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <textarea class="standard-input" placeholder="Weitere Angaben (optional)" data-name="Weitere Angaben"></textarea>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn btn-back"><i class="fa fa-caret-left" aria-hidden="true"></i>zuruck</button>
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <button class="btn btn-next">weiter<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area step-5" data-step="step-5" data-status="0" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 5: <span>Lage Der Immobilie</span></h2>
+                    <p class="progress-percent">68 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 68%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <img class="location-img" src="img/location.png">
+                    <p class="text">
+                        Die Lage Ihrer Immobilie ist eine entscheidene Grundlage fur die fachkundige Ermittlung des Verkehrswertes.
+                    </p>
+                    <div class="two-inputs">
+                        <input class="standard-input" name="Strabe" type="text" placeholder="Strabe *" data-req="false">
+                        <input class="standard-input" name="Hausnummer" type="text" placeholder="Hausnummer *" data-req="false">
+                    </div>
+                    <div class="two-inputs">
+                        <input class="standard-input" name="PLZ" type="text" placeholder="PLZ *" data-req="false">
+                        <input class="standard-input" name="Ort" type="text" placeholder="Ort *" data-req="false">
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn btn-back"><i class="fa fa-caret-left" aria-hidden="true"></i>zuruck</button>
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <button class="btn btn-next">weiter<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area loading" data-step="loading" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 6: <span>Ergebnis Erhalten</span></h2>
+                    <p class="progress-percent">85 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <p class="text">
+                        Einen Augenblick bitte...
+                    </p>
+                    <img class="preloader-img" src="img/preloader.png">
+                    <h3 class="preloader-text">VIE-FINANZ ermittelt den Verkehrswert<br>Ihres Grundstucks oder Ihrer Immobilie.</h3>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area step-6 complete-form" data-step="step-6" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 6: <span>Ergebnis Erhalten</span></h2>
+                    <p class="progress-percent">75 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <div class="column left-column">
+                        <p class="text">
+                            Wer soll die Bewertung erhalten?
+                        </p>
+                        <div class="two-inputs">
+                            <select class="standard-input standard-dropdown" data-placeholder="Anrede *" data-req="false" data-name="Anrede">
+                                <option></option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="WY">Fgsdf</option>
+                                <option value="WY">Toort</option>
+                                <option value="WY">Riiol</option>
+                            </select>
+                        </div>
+                        <div class="two-inputs">
+                            <input class="standard-input" name="Vorname" type="text" placeholder="Vorname *" data-req="false">
+                            <input class="standard-input" name="Nachname" type="text" placeholder="Nachname *" data-req="false">
+                        </div>
+                        <div class="two-inputs">
+                            <div class="input-with-tip">
+                                <input class="standard-input" name="Telefon" type="text" placeholder="Telefon *" data-type="phone">
+                                <span class="tip-icon"></span>
+                                <span class="tip-message">
+                                    <b>Warum meine Telefonnummer?</b><br>
+                                    Für Rückfragen und zur Besprechung<br>
+                                    individueller Besonderheiten
+                                </span>
+                            </div>
+                            <input class="standard-input" name="E-mail" type="text" placeholder="E-Mail *" data-type="email">
+                        </div>
+                        <label class="checkbox-label">
+                            <input type="checkbox" data-type="checkbox" value="Agreement">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Ich bin der Eigentumer oder vom Eigentumer beauftagt *</span>
+                        </label>
+                        <button class="btn btn-finish">Ergebnis erhalten</button>
+                    </div>
+                    <div class="column right-column">
+                        <div class="certificate">
+                            <img src="img/ssl.png">
+                            <span class="text small-text">Keine Datenweitergabe zu Werbezwecken</span>
+                        </div>
+                        <p class="text list-text">Bewertung direkt per E-Mail</p>
+                        <p class="text list-text">Ergebnis noch heute</p>
+                        <p class="text list-text">Kostenlos und unverbindlich</p>
+                        <div class="form-review">
+                            <p class="text text-italic review-text ">Super Service!<br>
+                                Schell und unkompliziert.</p>
+                            <p class="text text-italic review-author">Anita T. aus Zwickau</p>
+                        </div>
+                    </div>
+                    <div class="column-bottom">
+                        <p class="text privacy-text">
+                            Wir fragen Ihre Kontaktdaten ab, um sicherzustellen,
+                            dass Ihre Immobiliendaten ausschließlich von Ihnen
+                            genutzt werden. Ihre Kontaktdaten werden nicht an
+                            Dritte weitergeleitet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="step-area menu" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title"><span>Meine Angaben</span></h2>
+                </div>
+                <div class="middle-part">
+                    <ul class="menu-list">
+                        <li class="menu-item item-disabled" data-step="step-1" data-status="0">
+                            <p class="item-title">Haus-Stil</p>
+                            <p class="text item-descr">Einfamilienhaus, Zweifamilienhaus, Doppelhaushälfte, Reihenhaus, Mehrfamilienhaus</p>
+                        </li>
+                        <li class="menu-item item-disabled" data-step="step-2" data-status="0">
+                            <p class="item-title">Allgemeine Angaben</p>
+                            <p class="text item-descr">Bauweise, Baujahr, Sanierungen, Etagen, Zimmer, Grundstücksgröße, Wohnfläche, Dach</p>
+                        </li>
+                        <li class="menu-item item-disabled" data-step="step-3" data-status="0">
+                            <p class="item-title">Generelle Ausstattung</p>
+                            <p class="text item-descr">Bad, Außenanlagen, Fußbodenbelag, Fenster, Heizungsart, Keller</p>
+                        </li>
+                        <li class="menu-item item-disabled" data-step="step-4" data-status="0">
+                            <p class="item-title">Besonderheiten</p>
+                            <p class="text item-descr">Einbauküche, Sauna, Wintergarten, Abstellraum, Kamin, Privatgarten, Fassade, Stellplätze</p>
+                        </li>
+                        <li class="menu-item item-disabled" data-step="step-5" data-status="0">
+                            <p class="item-title">Lage der Immobilie</p>
+                            <p class="text item-descr">Straße, Hausnummer, PLZ, Ort</p>
+                        </li>
+                        <li class="menu-item item-disabled" data-step="step-6" data-status="0">
+                            <p class="item-title">Ergebnis erhalten</p>
+                            <p class="text item-descr">Anrede, Vorname, Nachname, Telefon, E-Mail, Eigentümer</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="type-area selected-type-3" style="display: none">
+            <div class="step-area step-1" data-step="step-1" data-status="0" style="display: block">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 1: <span>Wouhnungs-stil</span></h2>
+                    <p class="progress-percent">0 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 0%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <div class="types">
+                        <figure class="type-of type-1" data-req="false" data-name="Wouhnungs-stil" data-value="Etagenwohnung">
+                            <img src="img/viafinanz_etagenwohnung.png">
+                            <figcaption>
+                                Etagenwohnung
+                            </figcaption>
+                        </figure>
+                        <figure class="type-of type-2" data-req="false" data-name="Wouhnungs-stil" data-value="Dachgeschoss">
+                            <img src="img/viafinanz_dachgeschosswohnung.png">
+                            <figcaption>
+                                Dachgeschoss
+                            </figcaption>
+                        </figure>
+                        <figure class="type-of type-3" data-req="false" data-name="Wouhnungs-stil" data-value="Penthouse">
+                            <img src="img/viafinanz_penthouse.png">
+                            <figcaption>
+                                Penthouse
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn btn-back"><i class="fa fa-caret-left" aria-hidden="true"></i>zuruck</button>
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <button class="btn btn-next">weiter<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area step-2" data-step="step-2" data-status="0" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 2: <span>Allgemeine Angaben</span></h2>
+                    <p class="progress-percent">17 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 17%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <div class="two-inputs">
+                        <input class="standard-input" name="Baujahr" type="text" placeholder="Baujahr z.B. 1995 *" data-req="false" data-type="number">
+                    </div>
+                    <div class="one-input">
+                        <select class="standard-input standard-dropdown" data-placeholder="Sanierungen, die in den letzten 15 Jahren durchgeführt wurden *" data-req="false" data-name="Sanierungen">
+                            <option></option>
+                            <option value="Vollständig innerhalb der letzten 15 Jahren saniert">Vollständig innerhalb der letzten 15 Jahren saniert</option>
+                            <option value="Teilweise innerhalb der letzten 15 Jahren saniert">Teilweise innerhalb der letzten 15 Jahren saniert</option>
+                            <option value="Keine Sanierung innerhalb der letzten 15 Jahre">Keine Sanierung innerhalb der letzten 15 Jahre</option>
+                            <option value="Nicht bekannt">Nicht bekannt</option>
+                        </select>
+                    </div>
+                    <div class="two-inputs">
+                        <input class="standard-input" name="Etage" type="text" placeholder="Etage *" data-req="false" data-type="number">
+                        <input class="standard-input" name="Anzahl Zimmer" type="text" placeholder="Anzahl Zimmer *" data-req="false">
+                    </div>
+                    <div class="two-inputs">
+                        <input class="standard-input" name="Wohnflache (m2)" type="text" placeholder="Wohnflache (m2) *" data-req="false" data-type="number">
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn btn-back"><i class="fa fa-caret-left" aria-hidden="true"></i>zuruck</button>
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <button class="btn btn-next">weiter<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area step-3" data-step="step-3" data-status="0" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 3: <span>Generelle Ausstattung</span></h2>
+                    <p class="progress-percent">34 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 34%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <div class="types">
+                        <figure class="type-of type-1" data-req="false" data-name="Generelle Ausstattung" data-value="Bad mit Fenster">
+                            <img src="img/bad_mit_fenster.png">
+                            <figcaption>
+                                Bad mit Fenster
+                            </figcaption>
+                        </figure>
+                        <figure class="type-of type-2" data-req="false" data-name="Generelle Ausstattung" data-value="Bad innenliegend">
+                            <img src="img/bad_ohne_fenster.png">
+                            <figcaption>
+                                Bad innenliegend
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="checkbox-row">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Mehr als 1 Bad">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Mehr als 1 Bad</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Badewanne">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Badewanne</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Dusche">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Dusche</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Separates Gaste-WC">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Separates Gaste-WC</span>
+                        </label>
+                    </div>
+                    <div class="two-inputs">
+                        <select class="standard-input standard-dropdown" data-placeholder="Balkon/Loggia/Terrasse *" data-req="false" data-name="Balkon/Loggia/Terrasse">
+                            <option></option>
+                            <option value="Über 10 m2">Über 10 m2</option>
+                            <option value="Kleiner als 10 m2">Kleiner als 10 m2</option>
+                            <option value="Kein nutzbarer Balkon/Loggia/Terrasse">Kein nutzbarer Balkon/Loggia/Terrasse</option>
+                        </select>
+                        <select class="standard-input standard-dropdown" data-placeholder="Heizungsart *" data-req="false" data-name="Heizungsart">
+                            <option></option>
+                            <option value="Zentralheizung">Zentralheizung</option>
+                            <option value="Fernwärme">Fernwärme</option>
+                            <option value="Fliesen">Holzpellets-Heizung</option>
+                            <option value="Holzpellets-Heizung">Fußbodenheizung</option>
+                            <option value="Solarkollektoren">Solarkollektoren für Warmwasser und Heizung</option>
+                            <option value="Wärmepumpe">Wärmepumpe</option>
+                            <option value="Einzelöfen">Einzelöfen</option>
+                            <option value="Schwerkraftheizung">Schwerkraftheizung</option>
+                            <option value="Nachtspeicherheizung">Nachtspeicherheizung</option>
+                            <option value="Sonstige">Sonstige</option>
+                        </select>
+                    </div>
+                    <div class="two-inputs">
+                        <select class="standard-input standard-dropdown" data-placeholder="Fußbodenbelag im Wohnzimmer *" data-req="false" data-name="Fußbodenbelag im Wohnzimmer">
+                            <option></option>
+                            <option value="Einfache Holzdielen">Einfache Holzdielen</option>
+                            <option value="Kunststoff/PVC">Kunststoff/PVC</option>
+                            <option value="Fliesen">Fliesen</option>
+                            <option value="Kunststeinplatten">Kunststeinplatten</option>
+                            <option value="Parkett">Parkett</option>
+                            <option value="Natursteinbelag">Natursteinbelag</option>
+                            <option value="Hochwertiger Massivholzboden">Hochwertiger Massivholzboden</option>
+                            <option value="Teppich">Teppich</option>
+                            <option value="Laminat">Laminat</option>
+                            <option value="Linoleum">Linoleum</option>
+                            <option value="Korkboden">Korkboden</option>
+                            <option value="Sonstige">Sonstige</option>
+                        </select>
+                        <select class="standard-input standard-dropdown" data-placeholder="Fenster *" data-req="false" data-name="Fenster">
+                            <option></option>
+                            <option value="Einfachverglasung">Einfachverglasung</option>
+                            <option value="Dreifachverglasung">Dreifachverglasung</option>
+                            <option value="Isolierverglasung">Isolierverglasung</option>
+                            <option value="Schallschutzverglasung">Schallschutzverglasung</option>
+                            <option value="Kastenfenster">Kastenfenster</option>
+                            <option value="Raumhohe Isolierverglasung">Raumhohe Isolierverglasung</option>
+                            <option value="Sonstige">Sonstige</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn btn-back"><i class="fa fa-caret-left" aria-hidden="true"></i>zuruck</button>
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <button class="btn btn-next">weiter<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area step-4" data-step="step-4" data-status="0" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 4: <span>Besonderheiten</span></h2>
+                    <p class="progress-percent">51 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 51%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <div class="checkbox-row">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Einbaukuche">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Einbaukuche</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Wintergarten">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Wintergarten</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Offener Kamin/Kachelofen">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Offener Kamin/Kachelofen</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Sauna">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Sauna</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Abstellraum">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Abstellraum</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Privatgarten">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Privatgarten</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Fassade, Aufenwade uberwiegend gedammt">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Fassade, Aufenwade uberwiegend gedammt</span>
+                        </label>
+                    </div>
+                    <div class="two-inputs">
+                        <div class="inline-input">
+                            <p class="text">
+                                Garagenstellplatze
+                            </p>
+                            <select class="standard-input standard-dropdown" data-req="false" data-name="Garagenstellplatze">
+                                <option value="1">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="inline-input">
+                            <p class="text">
+                                Aubenstellplatze
+                            </p>
+                            <select class="standard-input standard-dropdown" data-req="false" data-name="Aubenstellplatze">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <textarea class="standard-input" placeholder="Weitere Angaben (optional)" data-name="Weitere Angaben"></textarea>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn btn-back"><i class="fa fa-caret-left" aria-hidden="true"></i>zuruck</button>
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <button class="btn btn-next">weiter<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area step-5" data-step="step-5" data-status="0" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 5: <span>Lage Der Immobilie</span></h2>
+                    <p class="progress-percent">68 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 68%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <img class="location-img" src="img/location.png">
+                    <p class="text">
+                        Die Lage Ihrer Immobilie ist eine entscheidene Grundlage fur die fachkundige Ermittlung des Verkehrswertes.
+                    </p>
+                    <div class="two-inputs">
+                        <input class="standard-input" name="Strabe" type="text" placeholder="Strabe *" data-req="false">
+                        <input class="standard-input" name="Hausnummer" type="text" placeholder="Hausnummer *" data-req="false">
+                    </div>
+                    <div class="two-inputs">
+                        <input class="standard-input" name="PLZ" type="text" placeholder="PLZ *" data-req="false">
+                        <input class="standard-input" name="Ort" type="text" placeholder="Ort *" data-req="false">
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn btn-back"><i class="fa fa-caret-left" aria-hidden="true"></i>zuruck</button>
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <button class="btn btn-next">weiter<i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area loading" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 6: <span>Ergebnis Erhalten</span></h2>
+                    <p class="progress-percent">85 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <p class="text">
+                        Einen Augenblick bitte...
+                    </p>
+                    <img class="preloader-img" src="img/preloader.png">
+                    <h3 class="preloader-text">VIE-FINANZ ermittelt den Verkehrswert<br>Ihres Grundstucks oder Ihrer Immobilie.</h3>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="step-area step-6 complete-form" data-step="step-6" data-status="0" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title">SCHRITT 6: <span>Ergebnis Erhalten</span></h2>
+                    <p class="progress-percent">75 %</p>
+                    <div class="progress-line">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <div class="column left-column">
+                        <p class="text">
+                            Wer soll die Bewertung erhalten?
+                        </p>
+                        <div class="two-inputs">
+                            <select class="standard-input standard-dropdown" data-placeholder="Anrede *" data-req="false" data-name="Anrede">
+                                <option></option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="WY">Fgsdf</option>
+                                <option value="WY">Toort</option>
+                                <option value="WY">Riiol</option>
+                            </select>
+                        </div>
+                        <div class="two-inputs">
+                            <input class="standard-input" name="Vorname" type="text" placeholder="Vorname *" data-req="false">
+                            <input class="standard-input" name="Nachname" type="text" placeholder="Nachname *" data-req="false">
+                        </div>
+                        <div class="two-inputs">
+                            <div class="input-with-tip">
+                                <input class="standard-input" name="Telefon" type="text" placeholder="Telefon *" data-type="phone">
+                                <span class="tip-icon"></span>
+                                <span class="tip-message">
+                                    <b>Warum meine Telefonnummer?</b><br>
+                                    Für Rückfragen und zur Besprechung<br>
+                                    individueller Besonderheiten
+                                </span>
+                            </div>
+                            <input class="standard-input" name="E-Mail" type="text" placeholder="E-Mail *" data-type="email">
+                        </div>
+                        <label class="checkbox-label">
+                            <input type="checkbox" data-type="checkbox" value="Agreement">
+                            <span class="custom-checkbox"></span>
+                            <span class="prop-name text">Ich bin der Eigentumer oder vom Eigentumer beauftagt *</span>
+                        </label>
+                        <button class="btn btn-finish">Ergebnis erhalten</button>
+                    </div>
+                    <div class="column right-column">
+                        <div class="certificate">
+                            <img src="img/ssl.png">
+                            <span class="text small-text">Keine Datenweitergabe zu Werbezwecken</span>
+                        </div>
+                        <p class="text list-text">Bewertung direkt per E-Mail</p>
+                        <p class="text list-text">Ergebnis noch heute</p>
+                        <p class="text list-text">Kostenlos und unverbindlich</p>
+                        <div class="form-review">
+                            <p class="text text-italic review-text ">Super Service!<br>
+                                Schell und unkompliziert.</p>
+                            <p class="text text-italic review-author">Anita T. aus Zwickau</p>
+                        </div>
+                    </div>
+                    <div class="column-bottom">
+                        <p class="text privacy-text">
+                            Wir fragen Ihre Kontaktdaten ab, um sicherzustellen,
+                            dass Ihre Immobiliendaten ausschließlich von Ihnen
+                            genutzt werden. Ihre Kontaktdaten werden nicht an
+                            Dritte weitergeleitet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="step-area menu" style="display: none">
+                <div class="top-part">
+                    <h2 class="step-title"><span>Meine Angaben</span></h2>
+                </div>
+                <div class="middle-part">
+                    <ul class="menu-list">
+                        <li class="menu-item item-disabled" data-step="step-1" data-status="0">
+                            <p class="item-title">Wohnungs-Stil</p>
+                            <p class="text item-descr">Etagenwohnung, Dachgeschoss, Penthouse</p>
+                        </li>
+                        <li class="menu-item item-disabled" data-step="step-2" data-status="0">
+                            <p class="item-title">Allgemeine Angaben</p>
+                            <p class="text item-descr">Baujahr, Sanierungen, Etage, Zimmer, Wohnfläche, Personenaufzug</p>
+                        </li>
+                        <li class="menu-item item-disabled" data-step="step-3" data-status="0">
+                            <p class="item-title">Generelle Ausstattung</p>
+                            <p class="text item-descr">Bad, Balkon/Loggia/Terrasse, Heizung, Fußbodenbelag, Fenster</p>
+                        </li>
+                        <li class="menu-item item-disabled" data-step="step-4" data-status="0">
+                            <p class="item-title">Besonderheiten</p>
+                            <p class="text item-descr">Einbauküche, Sauna, Wintergarten, Abstellraum, Kamin, Keller, Privatgarten, Fassade, Stellplätze</p>
+                        </li>
+                        <li class="menu-item item-disabled" data-step="step-5" data-status="0">
+                            <p class="item-title">Lage der Immobilie</p>
+                            <p class="text item-descr">Straße, Hausnummer, PLZ, Ort</p>
+                        </li>
+                        <li class="menu-item item-disabled" data-step="step-6" data-status="0">
+                            <p class="item-title">Ergebnis erhalten</p>
+                            <p class="text item-descr">Anrede, Vorname, Nachname, Telefon, E-Mail, Eigentümer</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-part">
+                    <button class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
