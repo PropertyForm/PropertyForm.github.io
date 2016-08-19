@@ -385,6 +385,15 @@ div.global-step {
 .preloader-img {
     display: block;
     margin:  50px auto 30px;
+    animation-name: loader;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes loader {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
 }
 
 .column {
