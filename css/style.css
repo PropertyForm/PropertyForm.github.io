@@ -707,6 +707,15 @@ input[type=checkbox]:checked + .custom-checkbox:before {
     width: 100% !important;
 }
 
+select.standard-input.standard-dropdown.select2-hidden-accessible {
+    width: 90% !important;
+}
+
+.selected-type-2 .step-4 select.standard-input.standard-dropdown.select2-hidden-accessible,
+.selected-type-3 .step-4 select.standard-input.standard-dropdown.select2-hidden-accessible {
+    width: auto !important;
+}
+
 .selected-type-2 .two-inputs,
 .selected-type-2 .one-input,
 .selected-type-3 .two-inputs,
@@ -881,17 +890,36 @@ textarea.standard-input {
 
 @media (max-width: 767px) {
 
+    .form-area{
+        margin: 0 auto;
+    }
+
     .step-area,
     .global-step,
     .type-area,
     .form-area{
-        min-height: 1000px;
+        min-height: 100vh;
         width: 320px;
+        height: auto;
+    }
+
+    .step-area.menu {
+        min-height: auto;
+        padding-bottom: 70px;
+    }
+
+    .step-area.menu .bottom-part {
+        position: absolute;
     }
 
     .top-part {
         border-top:2px solid;
         padding: 1px 15px;
+    }
+
+    .step-area .bottom-part {
+        position: relative;
+        margin-top: 20px;
     }
 
     .form-area {
@@ -968,6 +996,7 @@ textarea.standard-input {
 
     .step-area .middle-part {
         padding: 15px 15px;
+        overflow: hidden;
     }
 
     .inline-input .text {
@@ -998,6 +1027,10 @@ textarea.standard-input {
 
     .btn-menu {
         margin-top: 100px !important;
+    }
+
+    .menu .btn-menu {
+        margin-top: 0 !important;
     }
 
     .type-of {
@@ -1089,6 +1122,7 @@ textarea.standard-input {
         margin-bottom: 10px;
     }
 
+    .selected-type-1 .two-inputs .select2-container:last-child,
     .selected-type-2 .two-inputs .select2-container:last-child,
     .selected-type-3 .two-inputs .select2-container:last-child {
         margin-bottom: 0;
@@ -1172,6 +1206,11 @@ textarea.standard-input {
     .selected-type-3 .step-3 .type-of {
         width: 128px;
         margin: 0 5px;
+    }
+
+    .invalid-message {
+        top: 75px;
+        padding: 7px 0;
     }
 
 }
